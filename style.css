@@ -1,0 +1,305 @@
+:root{
+  --font-pink: hsl(320, 69%, 42%);
+  --font-blue: hsl(244, 38%, 28%);
+  --background-white: hsl(283, 47%, 97%);
+  --background-blue: hsl(242, 50%, 38%);
+  --background-blue-gradient: linear-gradient(110deg, rgba(48,46,140,1) 0%, rgba(33,31,108,1) 45%, rgba(28,25,88,1) 66%);
+  font-size: 62.5%;
+}
+
+*{
+  font-size: 1.6rem;
+
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body, h1, p{
+  margin: 0;
+  padding: 0;
+}
+
+body, textarea{
+/* 
+  display: flex;
+  
+  flex-direction: column;
+
+  justify-content: center; */
+
+  background-color: var(--background-white);
+  font-family: "Mulish", sans-serif;
+  /*
+  Semibold: 600
+  Bold: 700
+  */
+  font-weight: 600;
+  color: var(--font-blue);
+}
+
+body header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 9.3rem;
+  padding-bottom:  1.7rem;
+}
+
+body header > img{
+  width: 36.4rem;
+  height: 37rem;
+
+  animation-name: move;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+
+body header div a img{
+  width: 5.9rem;
+  height: 10.5rem;
+}
+
+body header div a img:hover{
+  width: 6.7rem;
+  height: 12rem;
+  transition-duration: 1s;
+}
+
+body header div p {
+  margin-bottom: 3.5rem;
+}
+
+
+h1, section form fieldset legend{
+  font-size: 3.2rem;
+  color: var(--font-pink);
+
+  font-weight: 900;
+}
+
+main{
+  background: var(--background-blue-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 5.3rem 3.9rem 5.6rem;
+  gap: 5rem;
+}
+
+main .planets{
+  width: 35.2rem;
+  /* margin: 5.3rem 3.9rem; */
+  padding: 2.7rem 6.0rem 2.7rem 2.7rem ;
+
+  background-color: #FFF;
+  border-radius: 1.5rem;
+
+  
+}
+
+main .planets img{
+  margin-bottom: 3.3rem;
+
+  animation-name: rotate;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+main .planets h1{
+  margin-bottom: 2rem;
+}
+
+form{
+  display: flex;
+
+  margin-top: 7.8rem;
+  margin-bottom: 6.5rem;
+}
+
+section form fieldset{
+  border: none;
+
+  display: flex;
+  flex-direction: column; 
+  
+  margin: auto;
+  padding: 0;
+
+  gap: 2.4rem;
+
+
+}
+
+section form fieldset legend{
+  margin-bottom: 4.3rem;
+}
+
+section form fieldset .input-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid black;
+  border-radius: 1.6rem;
+
+  padding: 1.2rem 1.4rem;
+
+  width: 34.8rem;
+}
+
+section form fieldset .input-style input, textarea{
+  width: 100%;
+  border: none;
+  background-color: var(--background-white);
+  color: var(--font-blue);
+  font-size: 1.6rem;
+
+  outline: none;
+}
+
+section form fieldset .input-style textarea{
+  min-height: 12.6rem;
+}
+
+/*Estilizando o Placeholder geral na página*/
+::-webkit-input-placeholder { color: var(--font-blue); font-weight: 500}
+input:-moz-placeholder { color: var(--font-blue)}
+textarea:-moz-placeholder{ color: var(--font-blue)}
+
+section form fieldset button{
+
+  width: 15.1rem;
+  height: 4.5rem;
+
+  background: var(--background-blue-gradient);
+  color: white;
+
+  border: none;
+  border-radius: 1.6rem;
+
+  font-size: 1.4rem;
+}
+
+section form fieldset button:hover{
+  width: 16rem;
+  height: 5.1rem;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+footer{
+  color: white;
+  background: var(--background-blue-gradient);
+
+  height: 7.8rem;
+
+  font-size: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@media (min-width: 768px){
+  body{
+    width: 100%;
+  }
+
+  body header{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: start;
+
+  }
+
+  body header > img{
+    /* max-width: 72rem;
+    max-height: 73.2rem; */
+    width: 45%;
+    height: 45%;
+  }
+
+  body header h1{
+    font-size: 6rem;
+    margin-top: 31.2rem
+  }
+  body header div p{
+    font-size: 3.2rem; 
+    margin-bottom: 18rem;
+  }
+
+  main{
+    flex-direction: row;
+
+    justify-content: center;
+  }
+
+  main .planets{
+    min-height: 41rem;
+  }
+
+  form{
+    margin-left: 11rem;
+    min-width: 59.5rem;
+    
+
+  }
+
+  section form fieldset{
+    margin: 0;
+    width: 100%;
+  }
+
+  section form fieldset .input-style{
+    width: 100%;
+  }
+
+  section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  section #stars{
+    width: 64.4rem;
+    height: 61.2rem;
+    background-image: url("./img/estrelas.svg");
+
+    animation-name: sparkle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes move{
+  /*to*/
+  100%{
+    transform: rotate(16deg) translateY(-120px);
+  }
+}
+
+@keyframes rotate{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sparkle {
+  50%{
+    filter: saturate(300%);
+  }
+ 
+}
